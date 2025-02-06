@@ -1,0 +1,331 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  cursor: url(../img/cursor.svg) 4 1, pointer;
+}
+
+body {
+  background: #121213;
+  font-family: Montserrat;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 130%;
+}
+
+h2 {
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 94px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.services .marquee_line {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.services .marquee_line .marquee_element {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 36px;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee_line .marquee_element .marquee_img,
+.marquee_line .marquee_element .text {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.marquee_line .marquee_element .text p {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.marquee_line .marquee_element .text .blue {
+  color: #0b68f0;
+}
+
+.services .middle_block .heading_block {
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.services .middle_block .heading_block {
+  width: 100%;
+  max-width: 1920px;
+  padding: 0 5em;
+}
+
+.services .middle_block .heading_block .text_block {
+  flex-basis: 60%;
+  color: #ffffff;
+}
+
+.services .middle_block .slider_block {
+  margin: 120px 0 160px 0;
+}
+
+.middle_block .slider_block .item_slider {
+  padding: 12px;
+  height: 685px;
+  max-width: 550px;
+}
+
+.middle_block .slider_block .item_slider.slick-current .slide_wrapper,
+.middle_block .slider_block .item_slider:hover .slide_wrapper {
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
+.middle_block
+  .slider_block
+  .item_slider.slick-current
+  .slide_wrapper
+  .heading_slide
+  .btn_arrow,
+.middle_block
+  .slider_block
+  .item_slider:hover
+  .slide_wrapper
+  .heading_slide
+  .btn_arrow {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.middle_block
+  .slider_block
+  .item_slider.slick-current
+  .slide_wrapper
+  .heading_slide
+  .btn_arrow:hover,
+.middle_block
+  .slider_block
+  .item_slider:hover
+  .slide_wrapper
+  .heading_slide
+  .btn_arrow:hover {
+  transform: scale(1.05);
+}
+
+.middle_block
+  .slider_block
+  .item_slider.slick-current
+  .slide_wrapper
+  .heading_slide
+  .price,
+.middle_block
+  .slider_block
+  .item_slider:hover
+  .slide_wrapper
+  .heading_slide
+  .price {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.slider_block .item_slider.slick-current .slide_wrapper ul.services_list span,
+.slider_block .item_slider:hover .slide_wrapper ul.services_list span {
+  transition: all 0.3s;
+  color: #0b68f0;
+}
+
+.middle_block .slider_block .item_slider.slick-current .slide_wrapper::before,
+.middle_block .slider_block .item_slider.slick-current .slide_wrapper::after {
+  width: 100%;
+  transform: translateX(-50%);
+}
+
+.middle_block .slider_block .item_slider .slide_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background: #19191b;
+  color: #3b3d48;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.slider_block .item_slider .slide_wrapper::before,
+.slider_block .item_slider .slide_wrapper::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #0b68f0;
+  transition: all 0.2s ease;
+}
+
+.slider_block .item_slider .slide_wrapper::before {
+  top: 0;
+}
+
+.slider_block .item_slider .slide_wrapper::after {
+  bottom: 0;
+}
+
+.slider_block .item_slider .slide_wrapper:hover::before,
+.slider_block .item_slider .slide_wrapper:hover::after {
+  width: 100%;
+  transform: translateX(-50%);
+}
+
+.item_slider .slide_wrapper .heading_slide .head_slide {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slide_wrapper .heading_slide .head_slide .title {
+  color: #ffffff;
+  font-size: clamp(35px, 2vw + 20px, 42px);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.slide_wrapper .heading_slide .head_slide .btn_arrow {
+  opacity: 0;
+}
+
+.slide_wrapper .heading_slide .head_slide .btn_arrow a {
+  text-decoration: none;
+}
+
+.slide_wrapper .heading_slide .head_slide .btn_arrow a span {
+  display: block;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.45px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: -8px;
+}
+
+.slide_wrapper .heading_slide .price {
+  flex-basis: 100%;
+  color: #0b68f0;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 400;
+  margin: 16px 0;
+}
+
+.slide_wrapper .heading_slide .price {
+  opacity: 0;
+}
+
+.item_slider .slide_wrapper ul.services_list {
+  list-style: none;
+}
+
+.item_slider .slide_wrapper ul.services_list li {
+  font-size: clamp(12px, 1vw + 10px, 22px);
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+
+.item_slider .slide_wrapper ul.services_list li span {
+  color: #3b3d48;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .services .slider_block .item_slider {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .services .middle_block .heading_block {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .services .middle_block .heading_block .text_block {
+    text-align: center;
+  }
+
+  .services .middle_block .slider_block {
+    margin: 50px 0 10px 0;
+  }
+
+  services .middle_block .slider_block .item_slider {
+    max-height: 600px;
+  }
+
+  .middle_block .slider_block .item_slider .head_slide {
+    gap: 12px;
+  }
+
+  .middle_block .slider_block .item_slider ul.services_list li {
+    margin-bottom: 15px;
+  }
+
+  .marquee_line .marquee_element .text p {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading_block {
+    padding: 0 5%;
+  }
+
+  .middle_block .slider_block .item_slider {
+    max-height: 530px;
+    max-width: 100%;
+  }
+}
